@@ -29,6 +29,20 @@
   ```
 * 重新開機讓設定生效。
 
+### 設定值說明
+*  GTK_IM_MODULE=fcitx
+   * GTK 是 GNOME、XFCE 等桌面環境廣泛使用的圖形使用者介面（GUI）工具套件。
+   * 這個設定值告訴 GTK 應用程式（例如：Firefox、Kate、LibreOffice 等）要使用 fcitx 作為其輸入法模組。
+*  QT_IM_MODULE=fcitx
+   * QT 是另一套流行的 GUI 工具套件，KDE 桌面環境以及許多應用程式（如 VLC、VirtualBox）都使用它。
+   * 這個設定值告訴 QT 應用程式要使用 fcitx 作為其輸入法模組。
+*  XMODIFIERS=@im=fcitx
+   * XMODIFIERS 是一個古老的 X Window System 環境變數，主要用於指定輸入法。雖然現在的 GUI 工具套件（GTK 和 QT）有自己的設定，但這個變數仍然很重要，可以確保一些舊的或非主流的應用程式也能正常使用輸入法。
+   * @im=fcitx 的意思是「im（輸入法）是 fcitx」。
+*  SDL_IM_MODULE=fcitx
+   * SDL（Simple DirectMedia Layer）是一個跨平台的函式庫，主要用於開發遊戲和多媒體應用程式。
+   * 這個設定值確保在使用 SDL 開發的應用程式（例如一些遊戲）中，fcitx 輸入法也能正常運作。    
+
 
 ### 如果遇到新酷音都安裝成功，也安裝完fcitx，但使用ctrl+space就是無法輸入拼音
 * 您的系統沒有自動啟動 Fcitx 5 這個框架，所以您的應用程式（例如瀏覽器）不知道要去呼叫哪個程式來處理您的鍵盤輸入，因此才會一直維持在英文輸入狀態。
