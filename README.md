@@ -1,7 +1,7 @@
 # ManjaroKDE
 學習安裝KDE、常用輸入法
 
-### 安裝fcitx相關package
+### <ins>安裝fcitx相關package</ins>
 
 `sudo pacman -S fcitx-im fcitx-chewing fcitx-table-extra fcitx-configtool fcitx-rime`
 
@@ -17,7 +17,7 @@
 
 接這務必要讓你的輸入法，在一開機就啟動，否則你會安裝成功，但是在圖形介面上按ctrl+space仍然打不開拼音輸入。
 
-### 設定讓Manjaro KDE開機，就執行fcitx輸入法
+### <ins>設定讓Manjaro KDE開機，就執行fcitx輸入法</ins>
 * 請至home目錄下找`.config`資料夾，進入後找`environment.d`資料夾，如果沒有請自行建立。
 * 進入`environment.d`資料夾，並建立`fcitx.conf`檔案。
 * 使用kate打開`fcitx.conf`檔案，並輸入如下資料。
@@ -29,7 +29,7 @@
   ```
 * 重新開機讓設定生效。
 
-### 設定值說明
+### <ins>設定值說明</ins>
 *  GTK_IM_MODULE=fcitx
    * GTK 是 GNOME、XFCE 等桌面環境廣泛使用的圖形使用者介面（GUI）工具套件。
    * 這個設定值告訴 GTK 應用程式（例如：Firefox、Kate、LibreOffice 等）要使用 fcitx 作為其輸入法模組。
@@ -44,7 +44,7 @@
    * 這個設定值確保在使用 SDL 開發的應用程式（例如一些遊戲）中，fcitx 輸入法也能正常運作。    
 
 
-### 如果遇到新酷音都安裝成功，也安裝完fcitx，但使用ctrl+space就是無法輸入拼音
+### <ins>如果遇到新酷音都安裝成功，也安裝完fcitx，但使用ctrl+space就是無法輸入拼音</ins>
 * 您的系統沒有自動啟動 Fcitx 5 這個框架，所以您的應用程式（例如瀏覽器）不知道要去呼叫哪個程式來處理您的鍵盤輸入，因此才會一直維持在英文輸入狀態。
 * 我們之前在終端機中設定環境變數的目的，就是要告訴您的 Manjaro KDE 系統：「嘿，當我登入的時候，請幫我啟動 Fcitx 這個輸入法框架，並讓它負責處理我的輸入。
 
